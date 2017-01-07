@@ -12,6 +12,7 @@
 		58089CBF1E20C4960060FE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58089CBD1E20C4960060FE40 /* Main.storyboard */; };
 		58089CC11E20C4960060FE40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58089CC01E20C4960060FE40 /* Assets.xcassets */; };
 		58089CC41E20C4960060FE40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58089CC21E20C4960060FE40 /* LaunchScreen.storyboard */; };
+		58089CCC1E20C5740060FE40 /* CellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58089CCB1E20C5740060FE40 /* CellDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		58089CC01E20C4960060FE40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58089CC31E20C4960060FE40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58089CC51E20C4960060FE40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58089CCB1E20C5740060FE40 /* CellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				58089CB91E20C4960060FE40 /* AppDelegate.swift */,
 				58089CBB1E20C4960060FE40 /* ViewController.swift */,
+				58089CCB1E20C5740060FE40 /* CellDetails.swift */,
 				58089CBD1E20C4960060FE40 /* Main.storyboard */,
 				58089CC01E20C4960060FE40 /* Assets.xcassets */,
 				58089CC21E20C4960060FE40 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				58089CBC1E20C4960060FE40 /* ViewController.swift in Sources */,
 				58089CBA1E20C4960060FE40 /* AppDelegate.swift in Sources */,
+				58089CCC1E20C5740060FE40 /* CellDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

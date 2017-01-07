@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpandableCells" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-U5-Rf8">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="1eG-fo-daY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1eG-fo-daY" id="fUe-as-WfK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4LL-2V-1ov"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TLO-m3-pkd"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKS-eg-RGj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aqi-4a-J78">
+                                        <rect key="frame" x="138" y="50" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="2TW-xT-fxK"/>
+                                            <constraint firstAttribute="height" constant="100" id="x6a-cX-Dv1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPy-iL-upF">
+                                        <rect key="frame" x="166.5" y="155" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Aqi-4a-J78" firstAttribute="centerX" secondItem="FKS-eg-RGj" secondAttribute="centerX" id="AEn-Wv-rgx"/>
+                                    <constraint firstItem="WPy-iL-upF" firstAttribute="top" secondItem="Aqi-4a-J78" secondAttribute="bottom" constant="5" id="BXy-yF-Ags"/>
+                                    <constraint firstItem="Aqi-4a-J78" firstAttribute="centerY" secondItem="FKS-eg-RGj" secondAttribute="centerY" id="Ote-m4-dhT"/>
+                                    <constraint firstItem="WPy-iL-upF" firstAttribute="centerX" secondItem="FKS-eg-RGj" secondAttribute="centerX" id="h8v-Y0-3m9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dQt-U5-Rf8" firstAttribute="top" secondItem="FKS-eg-RGj" secondAttribute="bottom" id="A2c-m9-8jk"/>
+                            <constraint firstAttribute="trailing" secondItem="FKS-eg-RGj" secondAttribute="trailing" id="Bqh-RN-cga"/>
+                            <constraint firstItem="dQt-U5-Rf8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cj1-Vx-XVO"/>
+                            <constraint firstAttribute="trailing" secondItem="dQt-U5-Rf8" secondAttribute="trailing" id="Kzo-vm-uu1"/>
+                            <constraint firstItem="FKS-eg-RGj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="N8D-Op-zG6"/>
+                            <constraint firstItem="FKS-eg-RGj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eQ2-U2-KHK"/>
+                            <constraint firstItem="FKS-eg-RGj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lzc-Da-YGv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dQt-U5-Rf8" secondAttribute="bottom" id="yGW-gt-I51"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileName" destination="WPy-iL-upF" id="BlP-QA-cXT"/>
+                        <outlet property="profilePicture" destination="Aqi-4a-J78" id="eoP-JD-bRB"/>
+                        <outlet property="tableView" destination="dQt-U5-Rf8" id="GnR-f3-Tqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
